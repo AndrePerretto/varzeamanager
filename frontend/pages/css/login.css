@@ -1,0 +1,21 @@
+.container {
+    width: 100vw;
+    height: 100vh;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.box {
+    width: 600px;
+    height: 500px;
+    background-image:url('../imagens/fundo login.png');
+    background-repeat: no-repeat;
+}
+body{
+    background-image:url('../imagens/Fundo inicial.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    margin: 0px;
+}
