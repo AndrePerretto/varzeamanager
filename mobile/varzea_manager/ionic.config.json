@@ -1,0 +1,7 @@
+{
+  "name": "varzea_manager",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

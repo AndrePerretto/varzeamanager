@@ -1,0 +1,257 @@
+<ion-content>  
+  <ion-slides pager="true" (ionSlideDidChange)="ionSlideDidChange($event)" (ionSlideReachEnd)="ionSlideReachEnd($event)">
+    <ion-slide style="background-color: rgba(10, 114, 212, 0.445);">
+      <ion-item >
+        <ion-label position="floating">Nome do time</ion-label>
+        <ion-input style="width: 300px;"  id="nometime" type="text" value="" placeholder="Digite o nome do seu time"></ion-input>
+      </ion-item>
+    </ion-slide>
+    <ion-slide style="background-color: rgba(10, 114, 212, 0.212);">      
+      <ion-list style="background-color:rgba(10, 114, 212, 0);">
+        <ion-text style="color: white;font-size:larger;" >
+          <h3>ESCOLHA SUA LOCALIZAÇÃO</h3>
+        </ion-text>
+        <ion-list>
+          <ion-item>
+            <ion-label>Estados</ion-label>
+            <ion-select okText="Confirmar" cancelText="Cancelar">
+              <ion-select-option value="AC">AC</ion-select-option>
+              <ion-select-option value="AL">AL</ion-select-option>
+              <ion-select-option value="AP">AP</ion-select-option>
+              <ion-select-option value="AM">AM</ion-select-option>
+              <ion-select-option value="BA">BA</ion-select-option>
+              
+              <ion-select-option value="CE">CE</ion-select-option>
+              <ion-select-option value="ES">ES</ion-select-option>
+              <ion-select-option value="GO">GO</ion-select-option>
+              <ion-select-option value="MA">MA</ion-select-option>
+              <ion-select-option value="MT">MT</ion-select-option>
+              
+              <ion-select-option value="MS">MS</ion-select-option>
+              <ion-select-option value="MG">MG</ion-select-option>
+              <ion-select-option value="PA">PA</ion-select-option>
+              <ion-select-option value="PB">PB</ion-select-option>
+              <ion-select-option value="PR">PR</ion-select-option>
+              
+              <ion-select-option value="PE">PE</ion-select-option>
+              <ion-select-option value="PI">PI</ion-select-option>
+              <ion-select-option value="RJ">RJ</ion-select-option>
+              <ion-select-option value="RN">RN</ion-select-option>
+              <ion-select-option value="RS">RS</ion-select-option>
+              
+              <ion-select-option value="RO">RO</ion-select-option>
+              <ion-select-option value="RR">RR</ion-select-option>
+              <ion-select-option value="SC">SC</ion-select-option>
+              <ion-select-option value="SP">SP</ion-select-option>
+              <ion-select-option value="SE">SE</ion-select-option>
+              <ion-select-option value="TO">TO</ion-select-option>
+              <ion-select-option value="DF">DF</ion-select-option>
+
+            </ion-select>
+          </ion-item>
+         </ion-list>
+
+        
+      <div>
+        <ion-item  style="width: 300px;">
+          <ion-label position="floating">Cidade</ion-label>
+          <ion-input   id="cidade" type="text" value="" placeholder="Digite a cidade"></ion-input>
+        </ion-item>
+      </div>
+      
+      <div>
+        <ion-item  style="width: 300px;">
+          <ion-label position="floating">Bairro</ion-label>
+          <ion-input   id="bairro" type="text" value="" placeholder="Digite o bairro"></ion-input>
+        </ion-item>
+      </div>
+      </ion-list>
+      
+      
+    </ion-slide>
+    <ion-slide style="background-color:rgba(10, 114, 212, 0.445);">
+      <ion-list style="background-color:rgba(10, 114, 212, 0);">
+        <p style="color:white;">CORES DO TIME</p>
+        
+        <input style="height: 180px;width: 100px;"  id="cor1" type="color" />
+        <input style="height: 180px;width: 100px;"  id="cor2" type="color" />
+        <input style="height: 180px;width: 100px;"  id="cor3" type="color" />
+
+      </ion-list>
+    </ion-slide>
+    
+    <ion-slide id="slideescudo" style="background-color:rgba(10, 114, 212, 0.212);">    
+      
+     
+      <ion-list  style="background-color:rgba(10, 114, 212, 0);height: 110%;">
+        <ion-grid>
+          <ion-row>
+            <p class="center" style="color:white;margin-top: 0px;">MONTE SEU ESCUDO</p>
+          </ion-row>
+          <ion-row  class="center" style="margin-top: -20px;">
+            <canvas #canvas width="600" height="300"></canvas>
+          </ion-row>
+          <ion-input id="chaveescudo" value="1" type="hidden" ></ion-input>
+        </ion-grid>
+        <ion-fab style="margin-left: 80px;margin-top: -20px;" horizontal="start" vertical="bottom" slot="fixed">
+          <ion-fab-button color="secondary">
+            <ion-icon md="caret-forward" ios="chevron-forward-circle-outline"></ion-icon>
+          </ion-fab-button>
+          <ion-fab-list side="end">
+            <ion-fab-button (click)="selecionarEscudo('1')" color="light">
+              <img src="../../assets/imagens/escudo1.png">
+            </ion-fab-button>
+            <ion-fab-button (click)="selecionarEscudo('2')"  color="light">
+              <img src="../../assets/imagens/escudo2.png">
+            </ion-fab-button>
+            <ion-fab-button  (click)="selecionarEscudo('3')" color="light">
+              <img  src="../../assets/imagens/escudo3.png">
+            </ion-fab-button>
+            <ion-fab-button (click)="selecionarEscudo('4')" color="light">
+              <img  src="../../assets/imagens/escudo4.png">
+            </ion-fab-button>            
+            <ion-fab-button  (click)="selecionarEscudo('5')" color="light">
+              <img  src="../../assets/imagens/escudo5.png">
+            </ion-fab-button>
+            <ion-fab-button  (click)="selecionarEscudo('6')" color="light">
+              <img  src="../../assets/imagens/escudo6.png">
+            </ion-fab-button>
+            <ion-fab-button (click)="selecionarEscudo('7')" color="light">
+              <img  src="../../assets/imagens/escudo7.png">
+            </ion-fab-button>
+           
+          </ion-fab-list>
+        </ion-fab>
+      </ion-list>
+      
+    </ion-slide>
+    
+    <ion-slide style="background-color:rgba(10, 114, 212, 0.445);">
+      
+      <ion-list  style="background-color:rgba(10, 114, 212, 0);height: 110%;">
+        <ion-grid>
+          <ion-row>
+            <p class="center" style="color:white;margin-top: 0px;">ESCOLHA SEU MASCOTE</p>
+          </ion-row>
+          <ion-row  class="center" style="margin-top: -40px;">
+            <img id="img_mascote" style="width: 400px;" src="../../assets/imagens/mascote2_grande.png">
+          </ion-row>
+          <ion-input id="chavemascote" value="1" type="hidden" ></ion-input>
+        </ion-grid>
+        <ion-fab style="margin-top: -20px;" horizontal="start" vertical="bottom" slot="fixed">
+          <ion-fab-button color="secondary">
+            <ion-icon md="caret-forward" ios="chevron-forward-circle-outline"></ion-icon>
+          </ion-fab-button>
+          <ion-fab-list side="end">
+            <ion-fab-button (click)="selecionarMascote('1')" color="light">
+              <img src="../../assets/imagens/mascote1.png">
+            </ion-fab-button>
+            <ion-fab-button (click)="selecionarMascote('2')"  color="light">
+              <img src="../../assets/imagens/mascote2.png">
+            </ion-fab-button>
+            <ion-fab-button  (click)="selecionarMascote('3')" color="light">
+              <img  src="../../assets/imagens/mascote3.png">
+            </ion-fab-button>
+            <ion-fab-button (click)="selecionarMascote('4')" color="light">
+              <img  src="../../assets/imagens/mascote4.png">
+            </ion-fab-button>            
+            <ion-fab-button  (click)="selecionarMascote('5')" color="light">
+              <img  src="../../assets/imagens/mascote5.png">
+            </ion-fab-button>
+            <ion-fab-button  (click)="selecionarMascote('6')" color="light">
+              <img  src="../../assets/imagens/mascote6.png">
+            </ion-fab-button>
+            <ion-fab-button (click)="selecionarMascote('7')" color="light">
+              <img  src="../../assets/imagens/mascote7.png">
+            </ion-fab-button>
+           
+          </ion-fab-list>
+        </ion-fab>
+      </ion-list>
+    </ion-slide>
+    
+    <ion-slide style="background-color:rgba(10, 114, 212, 0.212);">
+      <ion-list  style="background-color:rgba(10, 114, 212, 0);height: 110%;">
+        <ion-grid>
+          <ion-row>
+            <p class="center" style="color:white;margin-top: 0px;">ESCOLHA SEU UNIFORME</p>
+          </ion-row>
+          <ion-row  class="center">
+            <div style='position:relative; top:0px; left:0px;margin-left: 81px;'>
+              <canvas #canvasuniforme width="600" height="300"></canvas>
+            </div>
+              
+            <div style='position:absolute; top:110px; left:6px;'>                
+              <img id="img_uniforme" style="width: 500px;margin-top: -50px;margin-left: 90px;" >
+            </div>
+
+          </ion-row>
+          <ion-input id="chaveuniforme" value="1" type="hidden" ></ion-input>
+        </ion-grid>
+        <ion-fab style="margin-top: -20px;margin-left: 100px;" horizontal="start" vertical="bottom" slot="fixed">
+          <ion-fab-button color="secondary">
+            <ion-icon md="caret-forward" ios="chevron-forward-circle-outline"></ion-icon>
+          </ion-fab-button>
+          <ion-fab-list side="end">
+            <ion-fab-button (click)="selecionarUniforme('1')" color="light">
+              <img src="../../assets/imagens/uniforme1.png">
+            </ion-fab-button>
+            <ion-fab-button (click)="selecionarUniforme('2')"  color="light">
+              <img src="../../assets/imagens/uniforme2.png">
+            </ion-fab-button>
+            <ion-fab-button  (click)="selecionarUniforme('3')" color="light">
+              <img  src="../../assets/imagens/uniforme3.png">
+            </ion-fab-button>
+            <ion-fab-button (click)="selecionarUniforme('4')" color="light">
+              <img  src="../../assets/imagens/uniforme4.png">
+            </ion-fab-button>            
+            <ion-fab-button  (click)="selecionarUniforme('5')" color="light">
+              <img  src="../../assets/imagens/uniforme5.png">
+            </ion-fab-button>
+            <ion-fab-button  (click)="selecionarUniforme('6')" color="light">
+              <img  src="../../assets/imagens/uniforme6.png">
+            </ion-fab-button>
+            <ion-fab-button (click)="selecionarUniforme('7')" color="light">
+              <img  src="../../assets/imagens/uniforme7.png">
+            </ion-fab-button>
+
+
+
+
+
+           
+           
+          </ion-fab-list>
+        </ion-fab>
+      </ion-list>
+    </ion-slide>
+    
+    <ion-slide style="background-color:rgba(10, 114, 212, 0.445);">
+      <ion-list  style="background-color:rgba(10, 114, 212, 0);height: 110%;">
+        <ion-grid>
+          <ion-row>
+            <p class="center" style="color:white;margin-top: 10px;">CHURRASCO</p>
+          </ion-row>
+          <ion-row  class="center">
+            <p style="color:white">
+              Você tem 500 tostões no bolso, use com cuidado.  Você precisa oferecer um churrasco para atrair jogadores para o seu time.
+              Coloque abaixo o valor que deseja gastar com o churrasco, mas lembre-se de que quanto mais gastar no churrasco, mais jogadores você atrairá para o seu time.
+            </p>
+          </ion-row>
+
+
+          
+          <ion-row  class="center">
+            <ion-item>
+              <ion-label position="floating">Valor</ion-label>
+              <ion-input id="valorchurras" type="number" value="" placeholder="Digite um valor"></ion-input>
+            </ion-item>
+            <ion-button  expand="block" (click)="criarTime()">Criar</ion-button>
+         
+          </ion-row>
+
+        </ion-grid>
+      </ion-list>
+    </ion-slide>
+  </ion-slides>
+</ion-content>
