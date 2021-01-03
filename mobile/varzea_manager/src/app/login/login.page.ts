@@ -34,7 +34,7 @@ export class LoginPage implements OnInit {
 
       console.log(login);
       console.log(senha);
-      this.http.get("http://localhost:8000/api/usuarios/login/" + login + "/" + senha, {})
+      this.http.get("http://ec2-18-228-166-97.sa-east-1.compute.amazonaws.com:8000/api/usuarios/login/" + login + "/" + senha, {})
       .subscribe(data => {
         console.log(data);
         if(data){
@@ -54,7 +54,7 @@ export class LoginPage implements OnInit {
           alert("Login ou senha não encontrado");
         }
        }, error => {
-        console.log(error);
+        alert(error);
       });
   }
 

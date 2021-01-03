@@ -1,7 +1,8 @@
 {
   "name": "varzea_manager",
   "integrations": {
-    "cordova": {}
+    "cordova": {},
+    "capacitor": {}
   },
   "type": "angular"
 }

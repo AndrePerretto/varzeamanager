@@ -14,6 +14,7 @@ router.route('/*').get(cors(),function(req, res, next){
         password: 'Joao3:16',
         port: 5432
     };
+    res.header("Access-Control-Allow-Origin", "*");
     next();
 })
 
@@ -25,6 +26,7 @@ router.route('/*').post(cors(),function(req, res, next){
         password: 'Joao3:16',
         port: 5432
     };
+    res.header("Access-Control-Allow-Origin", "*");
     next();
 })
 
