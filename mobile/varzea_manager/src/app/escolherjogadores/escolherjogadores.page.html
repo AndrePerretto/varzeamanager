@@ -1,0 +1,30 @@
+
+<ion-content>
+  <ion-list  style="background-color:rgba(10, 114, 212, 0);height: 110%;">
+    <ion-grid>
+      <ion-row>
+        <p class="center" style="color:white;margin-top: 10px;">ESCOLHA SEUS JOGADORES</p>
+      </ion-row>
+      <ion-row>
+        <div>          
+          <canvas   (click)="clickCarta('1')"  style="position:absolute;z-index: 1;display: none;" id="canvascarta1" #canvascarta1 width="230" height="250" ></canvas>
+          <canvas (click)="clickCarta('2')"  style="position:absolute;z-index: 2;display: none;"  id="canvascarta2" #canvascarta2 width="230" height="250" ></canvas>
+          <canvas (click)="clickCarta('3')"  style="position:absolute;z-index: 3;"   id="canvascarta3" #canvascarta3 width="230" height="250" ></canvas>
+          <canvas (click)="clickCarta('4')"  style="position:absolute;z-index: 4;"   id="canvascarta4" #canvascarta4 width="230" height="250" ></canvas>
+          <canvas (click)="clickCarta('5')"  style="position:absolute;z-index: 5;"   id="canvascarta5" #canvascarta5 width="230" height="250" ></canvas>
+          <canvas (click)="clickCarta('6')"  style="position:absolute;z-index: 6;"   id="canvascarta6" #canvascarta6 width="230" height="250" ></canvas>
+          <canvas (click)="clickCarta('7')"  style="position:absolute;z-index: 7;"   id="canvascarta7" #canvascarta7 width="230" height="250" ></canvas>
+          <canvas (click)="clickCarta('8')"  style="position:absolute;z-index: 8;"   id="canvascarta8" #canvascarta8 width="230" height="250" ></canvas>
+          <canvas (click)="clickCarta('9')"  style="position:absolute;z-index: 9;"   id="canvascarta9" #canvascarta9 width="230" height="250" ></canvas>
+          <canvas (click)="clickCarta('10')"  style="position:absolute;z-index: 10;"   id="canvascarta10" #canvascarta10 width="230" height="250" ></canvas>
+          <canvas (click)="clickCarta('11')"   style="position:absolute;z-index: 11;"  id="canvascarta11" #canvascarta11 width="230" height="250" ></canvas>
+          <canvas  (click)="clickCarta('12')"   style="position:absolute;z-index: 12;" id="canvascarta12" #canvascarta12 width="230" height="250" ></canvas>
+          <canvas  (click)="clickCarta('13')"   style="position:absolute;z-index: 13;" id="canvascarta13" #canvascarta13 width="230" height="250" ></canvas>
+          <canvas  (click)="clickCarta('14')"   style="position:absolute;z-index: 14;" id="canvascarta14" #canvascarta14 width="230" height="250" ></canvas>
+          <canvas  (click)="clickCarta('15')"   style="position:absolute;z-index: 15;" id="canvascarta15" #canvascarta15 width="230" height="250" ></canvas>
+          <ion-input id="idcarta" type="hidden"></ion-input>
+        </div>
+      </ion-row>
+    </ion-grid>
+  </ion-list>
+</ion-content>

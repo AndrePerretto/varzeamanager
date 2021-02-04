@@ -1,0 +1,11 @@
+.center {
+    margin: auto;
+    width: 100%;
+    padding: 10px;
+  }
+
+  ion-content {
+    --background: url(../../assets/imagens/fundo_login.png) no-repeat center/cover fixed;
+    --background-repeat: no-repeat;
+    --background-size: 100% 100%;
+  }

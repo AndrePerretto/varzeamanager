@@ -21,7 +21,7 @@ export class LoginPage implements OnInit {
   login():void{
       var login = (<HTMLInputElement>document.getElementById('login')).value;
       var senha = (<HTMLInputElement>document.getElementById('senha')).value;
-
+      //alert('entrou no login');
       if(!login || !senha){ 
        /* const alert = this.alertCtrl.create({
           title: 'Desculpe',
@@ -29,6 +29,7 @@ export class LoginPage implements OnInit {
           buttons: ['OK']
         });
         alert.present();*/
+        alert('Informe um login e senha');
         return;
       }
 
